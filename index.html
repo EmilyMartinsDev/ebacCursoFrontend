@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Cadastre-se</h1>
+            <form action="">
+                <div class="container-cadastro">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" name="nome" id="nome">
+                </div>
+                <div class="container-cadastro">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="container-cadastro">
+                    <label for="telefone">telefone:</label>
+                    <input type="tel" name="telefone" id="telefone">
+                </div>
+                <div class="container-cadastro">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" name="cpf" id="cpf">
+                </div>
+                <div class="container-cadastro">
+                    <label for="endereco">Endereco Completo</label>
+                    <input type="text" name="endereco" id="endereco">
+                </div>
+                <div class="container-cadastro">
+                    <label for="cep">CEP:</label>
+                    <input type="text" name="cep" id="cep">
+                </div>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </main>
+ 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/messages_pt_BR.min.js"></script>
+    <script src="./js/jquery.mask.js"></script>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
