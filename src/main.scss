@@ -1,0 +1,116 @@
+@use './config/reset.scss';
+@use './config/variaveis.scss';
+@use 'sass:math';
+
+
+@function pixel-to-rem($pixelValue, $fatherValue: 16){
+    @return math.div($pixelValue , $fatherValue)+em;
+}
+
+
+
+body {
+    background-color: variaveis.$cor-de-fundo ;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+
+    .menu {
+        display: flex;
+
+        li {
+            font-weight: bold;
+            margin-left: pixel-to-rem(24, );
+
+            a {
+                color: variaveis.$link-color;
+                text-decoration: none;
+            }
+        }
+    }
+    
+}
+
+header {
+    background-color: variaveis.$header-background;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: pixel-to-rem(16, ) 0;
+    }
+    
+}
+
+
+section {
+    padding: pixel-to-rem(56, ) 0;
+
+    .products {
+        margin-top: pixel-to-rem(40, );
+        display: grid;
+        grid-template-columns: repeat(3, 32.66%);
+        column-gap: 1%;
+        row-gap: 4%;
+        width: 100%;
+
+        
+    .product-item {
+        img {
+            width: 100%;
+            border-radius: 16px;
+            }
+
+        .product-button {
+                display: block;
+                background-color: #44bd32;
+                color: variaveis.$link-color;
+                text-align: center;
+                padding: pixel-to-rem(8, ), 0;
+                border-radius: 8px;
+                margin-top: pixel-to-rem(8, );
+                text-decoration: none;
+
+                &:hover{
+                    background-color: #4cd137;
+                }
+            }
+            
+        
+        }
+    }
+}
+
+@media screen and (max-width: variaveis.$tablet ) {
+    .container {
+        max-width: 80%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+}
+
+@media screen and (max-width: variaveis.$mobile) {
+    .products {
+        display: block;
+
+        .product-item  {
+            margin-bottom: pixel-to-rem(32 );
+        }
+    }
+
+
+}
