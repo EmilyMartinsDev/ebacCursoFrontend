@@ -1,0 +1,1 @@
+const arrayNumeros=[1,20,40,5,70,4];function retornaMaior(r){let o=0;for(var a of r)o<a&&(o=a);return o}console.log(retornaMaior(arrayNumeros));
