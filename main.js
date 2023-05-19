@@ -124,6 +124,6 @@ function ContaCorrente(nome, cpf, agencia, inicialSaldo,  plano = 'basico'){
 
 const conta_Maria = new ContaPoupanca('Maria', '604.453.700-50', '001', 2000);
 const conta_Joao = new ContaCorrente('João', '464.599.680-04','0001', 5000, 'premium' );
-const conta_Emily = new ContaPoupanca('Emily', '305.725.570-19', '002', 4000,);
+const conta_Emily = new ContaPoupanca('Emily', '305.725.570-19', '002', 4000);
 
 console.log(conta_Joao.getPlano())
